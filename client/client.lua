@@ -19,17 +19,8 @@ CreateThread(function()
     FreezeEntityPosition(ped, true)
 
     -- Set Ped health so it cant die
-    while true do
-        pedhealth = GetEntityHealth(ped)
-        SetEntityMaxHealth(ped,100000)
-
-        if pedhealth <= 99999 then 
-            SetEntityHealth(ped,100000)
-        end
-        Wait(1)
-    end
-
-
+    SetEntityInvincible(ped, true)
+    SetEntityProofs(ped, true, true, true, true, true, true, true, true) 
 end)
 
 
